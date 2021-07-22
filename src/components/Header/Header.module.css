@@ -1,0 +1,13 @@
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+}

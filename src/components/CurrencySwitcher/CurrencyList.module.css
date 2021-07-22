@@ -1,0 +1,17 @@
+.list {
+  max-width: 114px;
+  z-index: 2;
+
+  position: absolute;
+
+  display: grid;
+  grid-auto-flow: row;
+  gap: 21px;
+
+  margin: 0;
+  padding: 20px 40px 20px 20px;
+  list-style: none;
+
+  background-color: white;
+  box-shadow: 0px 4px 35px rgba(168, 172, 176, 0.19);
+}

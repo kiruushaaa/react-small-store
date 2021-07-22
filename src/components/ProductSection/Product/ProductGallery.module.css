@@ -1,0 +1,43 @@
+.images {
+  max-width: 79px;
+  max-height: 511px;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.button {
+  cursor: pointer;
+
+  display: block;
+
+  margin: 0 0 40px 0;
+  padding: 0;
+  border: none;
+
+  overflow: hidden;
+
+  transition: transform 200ms;
+}
+
+.button:last-of-type {
+  margin-bottom: 0;
+}
+
+.button:hover {
+  transform: scale(1.2);
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 511px;
+
+  margin: 0 auto;
+
+  object-fit: cover;
+}
+
+.currentImageContainer {
+}

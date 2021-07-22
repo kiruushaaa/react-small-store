@@ -1,0 +1,11 @@
+.errorList {
+  margin-bottom: 30px;
+}
+
+.error {
+  color: tomato;
+  margin: 5px 0;
+
+  font-weight: 500;
+  font-size: 14px;
+}

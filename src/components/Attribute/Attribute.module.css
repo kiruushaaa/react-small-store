@@ -1,0 +1,52 @@
+.container {
+  position: relative;
+  display: flex;
+}
+
+.group {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  appearance: none;
+  position: absolute;
+}
+
+.label {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+
+  text-align: center;
+
+  padding: 0 5px;
+
+  border: 1px solid var(--c-black);
+
+  color: #292929;
+  background-color: white;
+
+  transition: color 150ms;
+}
+
+.input:checked + .label {
+  cursor: unset;
+
+  color: white;
+  background-color: var(--c-black);
+}
+
+.input:checked + .label.swatch {
+  opacity: 0.5;
+  box-shadow: 0 0 5px 2px var(--c-black);
+}

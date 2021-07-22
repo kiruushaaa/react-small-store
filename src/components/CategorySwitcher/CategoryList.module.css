@@ -1,0 +1,27 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+  text-transform: uppercase;
+
+  padding: 4px 16px 30px;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+
+  color: var(--c-black);
+}
+
+.active {
+  color: var(--c-primary);
+  border-bottom: 2px solid var(--c-primary);
+}

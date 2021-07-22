@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+}
+
+.button {
+  position: relative;
+  display: block;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+  margin: 0;
+  padding: 10px 16px 10px 0;
+  border: none;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+
+  color: var(--c-black);
+  background-color: transparent;
+}
+
+.button::after {
+  content: url('../../assets/images/list-condition.svg');
+  position: absolute;
+  right: 0;
+  transition: transform 100ms;
+}
+
+.buttonOpened::after {
+  transform: scale(1, -1);
+}

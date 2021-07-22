@@ -1,0 +1,46 @@
+.container {
+  position: relative;
+}
+
+.button {
+  position: relative;
+  cursor: pointer;
+
+  margin: 0 0 0 22px;
+  padding: 10px 0;
+  border: none;
+
+  background-color: transparent;
+}
+
+.counter {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+
+  text-transform: uppercase;
+
+  color: white;
+  background-color: var(--c-black);
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+}
+
+.icon {
+  display: block;
+  width: 20px;
+  max-width: 100%;
+  height: auto;
+}

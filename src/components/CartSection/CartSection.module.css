@@ -1,0 +1,130 @@
+.section {
+  background-color: white;
+}
+
+.section.fromCart {
+  min-width: 400px;
+  max-height: 600px;
+  overflow-y: scroll;
+
+  z-index: 2;
+
+  position: absolute;
+  top: 150%;
+  right: 0;
+
+  padding: 15px;
+}
+
+.title {
+  font-family: 'Raleway';
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+
+  text-transform: uppercase;
+
+  color: var(--c-black);
+
+  margin: 0 0 103px 0;
+}
+
+.fromCart .title {
+  font-size: 16px;
+  line-height: 26px;
+
+  text-transform: none;
+
+  margin-bottom: 23px;
+}
+
+.subtitle {
+  font-weight: normal;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  max-width: 1097px;
+}
+
+.listItem {
+  padding: 20px 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.priceBlock {
+  display: flex;
+}
+
+.fromCart .priceBlock {
+  justify-content: space-between;
+}
+
+.priceBlock > p {
+  margin: 0 5px 0 0;
+
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 18px;
+
+  color: var(--c-black);
+}
+
+.fromCart .priceBlock > p {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 35px;
+}
+
+.buttonGroup > * {
+  cursor: pointer;
+  display: block;
+
+  margin: 0;
+  padding: 18px 36px;
+
+  border: none;
+
+  font-family: 'Raleway';
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 18px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: white;
+}
+
+.buttonGroup > p > a {
+  color: var(--c-primary);
+}
+
+.fromCart .buttonGroup > * {
+  padding: 16px 32px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.fromCart .buttonGroup > a {
+  text-decoration: none;
+  color: var(--c-black);
+  border: 1px solid var(--c-black);
+}
+
+.buttonGroup > button {
+  color: white;
+  background-color: var(--c-primary);
+}

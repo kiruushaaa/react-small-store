@@ -4,7 +4,7 @@ import logo from '../../assets/images/logo.svg';
 
 import s from './Logo.module.css';
 
-class Logo extends React.Component {
+class Logo extends React.PureComponent {
   render() {
     return (
       <NavLink to='/' className={s.link}>

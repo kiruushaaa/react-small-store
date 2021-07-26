@@ -35,9 +35,10 @@ class CurrencySwitcher extends React.Component {
           <span className='visually-hidden'>Toggle currency list</span>
           {getCurrencyIcon(this.props.defaultCurrency)}
         </button>
-        {this.state.isOpened && (
-          <CurrencyList defaultCurrency={this.props.defaultCurrency} />
-        )}
+        <CurrencyList
+          isOpened={this.state.isOpened}
+          defaultCurrency={this.props.defaultCurrency}
+        />
       </div>
     );
   }

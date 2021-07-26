@@ -3,14 +3,13 @@ import { NavLink } from 'react-router-dom';
 import { graphql } from '@apollo/client/react/hoc';
 import { categoryAPI } from '../../apollo/queries';
 
-import s from './CategoryList.module.css';
+import s from './CategorySwitcher.module.css';
 
-class CategoryList extends React.Component {
+class CategorySwitcher extends React.Component {
   render() {
-    const { categories, loading } = this.props.data;
+    if (this.props.data.loading) return null;
 
-    if (loading) return null;
-    
+    const { categories } = this.props.data;
     const categoryList = ['all', ...categories.map(category => category.name)];
 
     return (
@@ -30,4 +29,4 @@ class CategoryList extends React.Component {
   }
 }
 
-export default graphql(categoryAPI.getAllCategories())(CategoryList);
+export default graphql(categoryAPI.getAllCategories())(CategorySwitcher);

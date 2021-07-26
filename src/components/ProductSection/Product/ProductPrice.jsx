@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getCurrencyIcon } from '../../../utils/utils';
 
-class ProductPrice extends React.PureComponent {
+class ProductPrice extends React.Component {
   render() {
     const price = this.props.prices.find(
       price => price.currency === this.props.defaultCurrency

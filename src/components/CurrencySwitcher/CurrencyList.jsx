@@ -7,9 +7,12 @@ import s from './CurrencyList.module.css';
 
 class CurrencyList extends React.Component {
   render() {
-    const { currencies, loading } = this.props.data;
+    const {
+      isOpened,
+      data: { loading, currencies },
+    } = this.props;
 
-    if (loading) return null;
+    if (loading || !isOpened) return null;
 
     return (
       <ul className={s.list}>

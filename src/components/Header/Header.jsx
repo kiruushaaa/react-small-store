@@ -1,8 +1,8 @@
 import React from 'react';
-import CartOverlayContainer from '../CartSection/CartOverlayContainer';
-import CategoryList from '../CategorySwitcher/CategoryList';
-import CurrencySwitcher from '../CurrencySwitcher/CurrencySwitcher';
+import CategorySwitcher from '../CategorySwitcher/CategorySwitcher';
 import Logo from '../Logo/Logo';
+import CurrencySwitcher from '../CurrencySwitcher/CurrencySwitcher';
+import CartOverlayContainer from '../CartSection/CartOverlayContainer';
 
 import s from './Header.module.css';
 
@@ -12,7 +12,7 @@ class Header extends React.Component {
       <header>
         <div className='container'>
           <nav className={s.nav}>
-            <CategoryList />
+            <CategorySwitcher />
             <Logo />
             <div className={s.icons}>
               <CurrencySwitcher />

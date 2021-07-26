@@ -1,10 +1,10 @@
 import React from 'react';
 import parse from 'html-react-parser';
-import ProductGallery from './ProductGallery';
+import ProductGallery from '../ProductGallery/ProductGallery';
 import AttributesListContainer from '../../Attribute/AttributesListContainer';
 
 import s from './ProductPage.module.css';
-import ProductPrice from './ProductPrice';
+import ProductPrice from '../ProductPrice/ProductPrice';
 
 class ProductPage extends React.Component {
   render() {

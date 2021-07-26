@@ -5,14 +5,14 @@ import { graphql } from '@apollo/client/react/hoc';
 import intersectionBy from 'lodash-es/intersectionBy';
 import { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
-import { productsAPI } from '../../apollo/queries';
-import CartItem from './CartItem';
+import { productsAPI } from '../../../apollo/queries';
+import CartItem from '../CartItem/CartItem';
 import {
   changeAttribute,
   increaseCount,
   reduceCount,
-} from '../../redux/basketSlice';
-import { getCurrencyIcon, totalPriceReducer } from '../../utils/utils';
+} from '../../../redux/basketSlice';
+import { getCurrencyIcon, totalPriceReducer } from '../../../utils/utils';
 
 import s from './CartSection.module.css';
 

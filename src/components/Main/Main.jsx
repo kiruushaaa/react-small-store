@@ -1,8 +1,8 @@
 import React from 'react';
 import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
-import ProductSection from '../ProductSection/ProductSection';
-import ProductPageContainer from '../ProductSection/Product/ProductPageContainer';
-import CartSection from '../CartSection/CartSection';
+import ProductSection from '../Product/ProductSection/ProductSection';
+import ProductPageContainer from '../Product/ProductPage/ProductPageContainer';
+import CartSection from '../Cart/CartSection/CartSection';
 import Mask from '../misc/Mask/Mask';
 
 import s from './Main.module.css';

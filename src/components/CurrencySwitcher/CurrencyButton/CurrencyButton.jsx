@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { changeCurrency } from '../../redux/appSlice';
-import { getCurrencyIcon } from '../../utils/utils';
+import { changeCurrency } from '../../../redux/appSlice';
+import { getCurrencyIcon } from '../../../utils/utils';
 
 import s from './CurrencyButton.module.css';
 

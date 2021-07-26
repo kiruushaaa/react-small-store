@@ -2,12 +2,11 @@ import React from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import { graphql } from '@apollo/client/react/hoc';
 import { productsAPI } from '../../../apollo/queries';
-
 import classNames from 'classnames';
-import ProductPrice from './ProductPrice';
+import ProductPrice from '../ProductPrice/ProductPrice';
+import AttributesListContainer from '../../Attribute/AttributesListContainer';
 
 import s from './ProductCard.module.css';
-import AttributesListContainer from '../../Attribute/AttributesListContainer';
 
 class ProductCard extends React.Component {
   state = {

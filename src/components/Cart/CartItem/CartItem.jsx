@@ -1,9 +1,9 @@
 import React from 'react';
 import { graphql } from '@apollo/client/react/hoc';
-import { productsAPI } from '../../apollo/queries';
+import { productsAPI } from '../../../apollo/queries';
 import classNames from 'classnames';
-import Attribute from '../Attribute/Attribute';
-import ProductPrice from '../ProductSection/Product/ProductPrice';
+import Attribute from '../../Attribute/Attribute';
+import ProductPrice from '../../Product/ProductPrice/ProductPrice';
 
 import s from './CartItem.module.css';
 
@@ -41,7 +41,7 @@ class CartItem extends React.Component {
     return (
       <article className={classNames(s.item, { [s.fromCart]: fromCart })}>
         <div>
-          <h3 className={s.title}>{name}</h3>
+          <h4 className={s.title}>{name}</h4>
           <ProductPrice className={s.price} prices={prices} />
           {attributes.map((attribute, position) => (
             <Attribute

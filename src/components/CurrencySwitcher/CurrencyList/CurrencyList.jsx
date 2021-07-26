@@ -1,7 +1,7 @@
 import React from 'react';
-import CurrencyButton from './CurrencyButton';
+import CurrencyButton from '../CurrencyButton/CurrencyButton';
 import { graphql } from '@apollo/client/react/hoc';
-import { currencyAPI } from '../../apollo/queries';
+import { currencyAPI } from '../../../apollo/queries';
 
 import s from './CurrencyList.module.css';
 

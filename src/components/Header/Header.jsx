@@ -2,7 +2,7 @@ import React from 'react';
 import CategorySwitcher from '../CategorySwitcher/CategorySwitcher';
 import Logo from '../Logo/Logo';
 import CurrencySwitcher from '../CurrencySwitcher/CurrencySwitcher';
-import CartOverlayContainer from '../CartSection/CartOverlayContainer';
+import CartOverlayContainer from '../Cart/CartOverlay/CartOverlayContainer';
 
 import s from './Header.module.css';
 

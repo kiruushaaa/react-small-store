@@ -1,10 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import onClickOutside from 'react-onclickoutside';
-import classNames from 'classnames';
 import { changeCurrency } from '../../redux/appSlice';
-import { getCurrencyIcon } from '../../utils/utils';
-import CurrencyList from './CurrencyList';
+import CurrencyList from './CurrencyList/CurrencyList';
+import CurrencySwitcherButton from './CurrencySwitcherButton/CurrencySwitcherButton';
 
 import s from './CurrencySwitcher.module.css';
 
@@ -22,19 +21,15 @@ class CurrencySwitcher extends React.Component {
   };
 
   render() {
-    const buttonClassName = classNames(s.button, {
-      [s.buttonOpened]: this.state.isOpened,
-    });
+    console.log('rendered');
 
     return (
       <div className={s.container}>
-        <button
-          className={buttonClassName}
-          type='button'
-          onClick={this.clickHandler}>
-          <span className='visually-hidden'>Toggle currency list</span>
-          {getCurrencyIcon(this.props.defaultCurrency)}
-        </button>
+        <CurrencySwitcherButton
+          isOpened={this.state.isOpened}
+          onClick={this.clickHandler}
+          currency={this.props.defaultCurrency}
+        />
         <CurrencyList
           isOpened={this.state.isOpened}
           defaultCurrency={this.props.defaultCurrency}

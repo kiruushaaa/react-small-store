@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from '@apollo/client/react/hoc';
-import { productsAPI } from '../../apollo/queries';
-import ProductCard from './Product/ProductCard';
+import { productsAPI } from '../../../apollo/queries';
+import ProductCard from '../ProductCard/ProductCard';
 
 import s from './ProductList.module.css';
 

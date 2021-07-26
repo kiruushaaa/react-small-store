@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import CartOverlay from './CartOverlay';
-import CartSection from './CartSection';
-import { totalCountReducer } from '../../utils/utils';
-import { appendMask, removeMask } from '../../redux/appSlice';
+import CartSection from '../CartSection/CartSection';
+import { totalCountReducer } from '../../../utils/utils';
+import { appendMask, removeMask } from '../../../redux/appSlice';
 
 class CartOverlayContainer extends React.Component {
   state = {

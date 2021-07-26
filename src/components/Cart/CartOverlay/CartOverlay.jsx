@@ -1,7 +1,7 @@
 import React from 'react';
 import onClickOutside from 'react-onclickoutside';
 
-import cart from '../../assets/images/cart.svg';
+import cart from '../../../assets/images/cart.svg';
 import s from './CartOverlay.module.css';
 
 class CartOverlay extends React.Component {

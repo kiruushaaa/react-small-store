@@ -1,0 +1,21 @@
+.gallery {
+  min-width: 0;
+  max-width: 141px;
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.smallGallery {
+  max-width: 105px;
+}
+
+.image {
+  display: block;
+
+  max-width: 100%;
+  height: auto;
+
+  object-fit: cover;
+}

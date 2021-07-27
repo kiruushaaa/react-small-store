@@ -1,0 +1,45 @@
+.slick-slider {
+  position: relative;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-arrow {
+  z-index: 1;
+
+  cursor: pointer;
+  position: absolute;
+
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  font-size: 0;
+
+  width: 24px;
+  height: 24px;
+
+  top: 50%;
+  transform: translateY(-50%);
+  filter: invert(50%);
+
+  background: transparent url('../../../assets/images/list-condition.svg')
+    no-repeat center / contain;
+}
+
+.slick-disabled {
+  cursor: unset;
+  opacity: 0.3;
+}
+
+.slick-prev {
+  left: 0;
+  transform: rotate(90deg);
+}
+
+.slick-next {
+  right: 0;
+  transform: rotate(-90deg);
+}

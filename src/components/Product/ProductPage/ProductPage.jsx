@@ -8,13 +8,17 @@ import ProductPrice from '../ProductPrice/ProductPrice';
 
 class ProductPage extends React.Component {
   render() {
-    const { id, name, inStock, prices, description, gallery } = this.props;
+    const { id, name, brand, inStock, prices, description, gallery } =
+      this.props;
 
     return (
       <>
         <div className={s.page}>
           <div className={s.info}>
-            <h2 className={s.title}>{name}</h2>
+            <h2 className={s.title}>
+              {brand}
+              <span className={s.name}>{name}</span>
+            </h2>
 
             <AttributesListContainer styleList={s} id={id}>
               <div>

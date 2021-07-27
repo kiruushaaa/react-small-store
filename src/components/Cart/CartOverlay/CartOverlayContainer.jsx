@@ -35,7 +35,10 @@ class CartOverlayContainer extends React.Component {
         counter={counter}
         toggleOverlay={this.toggleOverlay}
         onLeaveFromClick={this.onLeaveFromClick}>
-        <CartSection fromCart={true} counter={counter}>
+        <CartSection
+          fromCart={true}
+          counter={counter}
+          onLeaveFromClick={this.onLeaveFromClick}>
           {counter !== 0 && (
             <NavLink onClick={this.onLeaveFromClick} to='/cart'>
               View bag

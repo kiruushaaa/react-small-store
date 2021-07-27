@@ -67,6 +67,7 @@ export const productsAPI = {
       product(id: $id) {
         id
         name
+        brand
         inStock
         gallery
         prices {

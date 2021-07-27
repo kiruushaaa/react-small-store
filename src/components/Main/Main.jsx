@@ -12,7 +12,7 @@ class Main extends React.Component {
     const categoryName = this.props.location.pathname.split('/')[1];
 
     return (
-      <main>
+      <main className={s.main}>
         <div className='container'>
           <h1 className='visually-hidden'>Small Store</h1>
           <section className={s.section}>

@@ -7,6 +7,12 @@ import { attributesReducer } from '../../utils/utils';
 import originalStyles from './AttributesList.module.css';
 
 class AttributesList extends React.Component {
+  componentDidMount() {
+    if (this.props.attributes.length === 0 && this.props.fromProductCard) {
+      this.props.submitForm();
+    }
+  }
+
   render() {
     const { styleList, attributes } = this.props;
     const { errors, handleSubmit, setFieldValue } = this.props;
@@ -20,8 +26,6 @@ class AttributesList extends React.Component {
             key={attributeIdx}
             styleList={styleList}
             changeHandler={radioChangeHandler}
-            position={attributeIdx}
-            productId={this.props.id}
             {...attribute}
           />
         ))}

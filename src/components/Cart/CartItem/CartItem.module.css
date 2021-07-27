@@ -1,24 +1,38 @@
 .item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .title {
-  margin: 0 0 12px 0;
+  margin: 0 0 32px 0;
 
   font-family: 'Raleway';
-  font-weight: 300;
+  font-weight: 600;
   font-size: 30px;
   line-height: 27px;
 
   color: var(--c-black);
 }
 
+.name {
+  display: block;
+
+  font-weight: 300;
+
+  margin-top: 16px;
+}
+
 .fromCart .title {
   margin-bottom: 5px;
 
   font-size: 16px;
+  font-weight: 300;
   line-height: 26px;
+}
+
+.fromCart .name {
+  margin-top: 0;
 }
 
 .price {
@@ -76,7 +90,7 @@
 }
 
 .count {
-  margin: 0;
+  margin: 30px 0;
 
   font-family: 'Raleway';
   font-weight: 500;
@@ -89,26 +103,6 @@
 .fromCart .count {
   font-size: 16px;
   line-height: 26px;
-}
-
-.gallery {
-  display: flex;
-  justify-content: center;
-  max-width: 141px;
-  min-height: 185px;
-}
-
-.fromCart .gallery {
-  max-width: 105px;
-}
-
-.image {
-  display: block;
-
-  max-width: 100%;
-  height: auto;
-
-  object-fit: contain;
 }
 
 .attributeChooser {

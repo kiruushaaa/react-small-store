@@ -4,6 +4,7 @@ import { productsAPI } from '../../../apollo/queries';
 import classNames from 'classnames';
 import Attribute from '../../Attribute/Attribute';
 import ProductPrice from '../../Product/ProductPrice/ProductPrice';
+import Gallery from './Gallery';
 
 import s from './CartItem.module.css';
 
@@ -36,22 +37,26 @@ class CartItem extends React.Component {
     if (loading) return null;
 
     const { fromCart, idx } = this.props;
-    const { name, attributes, prices, gallery } = product;
+    const { name, brand, attributes, prices, gallery } = product;
 
     return (
       <article className={classNames(s.item, { [s.fromCart]: fromCart })}>
         <div>
-          <h4 className={s.title}>{name}</h4>
+          <h4 className={s.title}>
+            {brand}
+            <span className={s.name}>{name}</span>
+          </h4>
+
           <ProductPrice className={s.price} prices={prices} />
-          {attributes.map((attribute, position) => (
+
+          {attributes.map(attribute => (
             <Attribute
               styleList={s}
               key={attribute.id}
               changeHandler={this.changeHandler}
               selected={this.props.cartItem.attributes}
               idx={idx}
-              position={position}
-              productId={this.props.id}
+              fromCart={fromCart}
               {...attribute}
             />
           ))}
@@ -75,15 +80,7 @@ class CartItem extends React.Component {
           </button>
         </div>
 
-        <div className={s.gallery}>
-          <img
-            className={s.image}
-            src={gallery[0]}
-            alt={name}
-            width='141'
-            height='185'
-          />
-        </div>
+        <Gallery images={gallery} name={name} fromCart={fromCart} />
       </article>
     );
   }

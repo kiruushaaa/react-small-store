@@ -17,6 +17,8 @@
 .label {
   cursor: pointer;
 
+  align-self: stretch;
+
   display: flex;
   align-items: center;
   justify-content: center;

@@ -37,3 +37,6 @@ export const itemsComparator = (item, givenItem) =>
       ? true
       : false
     : false;
+
+export const getQuantity = counter =>
+  `${counter} item${counter !== 1 ? 's' : ''}`;

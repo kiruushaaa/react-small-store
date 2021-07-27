@@ -27,6 +27,14 @@
   color: var(--c-black);
 }
 
+.name {
+  display: block;
+
+  margin-top: 16px;
+
+  font-weight: normal;
+}
+
 .price {
   font-family: 'Raleway';
   font-style: normal;

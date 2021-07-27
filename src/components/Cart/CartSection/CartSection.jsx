@@ -12,7 +12,11 @@ import {
   increaseCount,
   reduceCount,
 } from '../../../redux/basketSlice';
-import { getCurrencyIcon, totalPriceReducer } from '../../../utils/utils';
+import {
+  getCurrencyIcon,
+  totalPriceReducer,
+  getQuantity,
+} from '../../../utils/utils';
 
 import s from './CartSection.module.css';
 
@@ -32,10 +36,7 @@ class CartSection extends React.Component {
       <div className={classNames(s.section, { [s.fromCart]: fromCart })}>
         {fromCart ? (
           <h3 className={s.title}>
-            My bag{', '}
-            <span className={s.subtitle}>{`${counter} item${
-              counter !== 1 ? 's' : ''
-            }`}</span>
+            My bag, <span className={s.subtitle}>{getQuantity(counter)}</span>
           </h3>
         ) : (
           <h2 className={s.title}>Cart</h2>
@@ -83,7 +84,10 @@ class CartSection extends React.Component {
             </button>
           ) : (
             <p>
-              Cart is empty! <NavLink to='/all'>View products</NavLink>
+              Cart is empty!{' '}
+              <NavLink to='/all' onClick={this.props.onLeaveFromClick}>
+                View products
+              </NavLink>
             </p>
           )}
         </div>

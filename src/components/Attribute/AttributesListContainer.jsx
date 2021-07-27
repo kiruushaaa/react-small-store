@@ -11,11 +11,13 @@ class AttributesListContainer extends React.Component {
 
     if (loading) return null;
 
-    const { id, data, styleList, addItem, clickHandler } = this.props;
+    const { id, data, styleList, addItem, clickHandler, fromProductCard } =
+      this.props;
 
     return (
       <AttributesList
         id={id}
+        fromProductCard={fromProductCard}
         attributes={data.product.attributes}
         styleList={styleList}
         onSubmit={addItem}

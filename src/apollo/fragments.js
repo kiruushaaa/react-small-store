@@ -4,6 +4,7 @@ export const PRODUCT_FRAGMENT = gql`
   fragment ProductFragment on Product {
     id
     name
+    brand
     inStock
     gallery
     attributes {

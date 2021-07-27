@@ -30,7 +30,7 @@ class ProductCard extends React.Component {
 
     if (loading) return null;
 
-    const { id, name, inStock, gallery, prices } = product;
+    const { id, name, brand, inStock, gallery, prices } = product;
 
     return (
       <article
@@ -48,8 +48,9 @@ class ProductCard extends React.Component {
         </NavLink>
 
         <h3 className={s.title} id={id}>
-          {name}
+          {brand} {name}
         </h3>
+
         <ProductPrice className={s.price} prices={prices} />
 
         {inStock && !this.state.isOverlayOpened && (
@@ -65,6 +66,7 @@ class ProductCard extends React.Component {
           <AttributesListContainer
             id={id}
             styleList={s}
+            fromProductCard={true}
             clickHandler={this.removeOverlay}>
             <button className={s.button} type='submit'>
               <span className='visually-hidden'>Add to cart</span>

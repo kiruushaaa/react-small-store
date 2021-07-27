@@ -1,9 +1,23 @@
-.images {
+.imageList {
   max-width: 79px;
   max-height: 511px;
 
   overflow-x: hidden;
   overflow-y: scroll;
+}
+
+.disableScroll {
+  overflow-y: visible;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  margin: 0 auto;
+
+  object-fit: cover;
 }
 
 .button {
@@ -26,18 +40,4 @@
 
 .button:hover {
   transform: scale(1.2);
-}
-
-.image {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  max-height: 511px;
-
-  margin: 0 auto;
-
-  object-fit: cover;
-}
-
-.currentImageContainer {
 }

@@ -6,17 +6,18 @@ import originalStyles from './Attribute.module.css';
 class Attribute extends Component {
   render() {
     const { styleList } = this.props;
-    const { idx, position, productId } = this.props;
+    const { idx, fromCart } = this.props;
     const { name, type, items, changeHandler, selected } = this.props;
 
+    const cartTag = fromCart ? 'cart' : '';
+
     // {idx} is representing item's index from cart
-    // {position} is representing attribute's index generated from {AttributeList}
 
     return (
       <div className={styleList.attributeChooser}>
         <p className={styleList.attributeName}>{name}:</p>
         <div className={originalStyles.container}>
-          {items.map(item => {
+          {items.map((item, itemIdx) => {
             //  i don't know what color value is used for a basket
             //  so i am providing that solution to basket store
             //  { ...rest, 'Color': notHEXcolor }
@@ -34,6 +35,8 @@ class Attribute extends Component {
               [originalStyles.swatch]: isSwatch,
             });
 
+            const groupId = `${name}${cartTag}${idx}${itemIdx}`;
+
             return (
               <div
                 className={classNames(originalStyles.group, {
@@ -43,8 +46,8 @@ class Attribute extends Component {
                 <input
                   className={originalStyles.input}
                   type='radio'
-                  name={`${name}${!!selected ? idx : ''}`}
-                  id={item.id + position + productId}
+                  name={groupId}
+                  id={groupId}
                   value={value}
                   onChange={() => changeHandler({ name, value })}
                   checked={isSelected}
@@ -53,7 +56,7 @@ class Attribute extends Component {
                 <label
                   className={labelClassName}
                   style={isSwatch ? { backgroundColor: item.value } : undefined}
-                  htmlFor={item.id + position + productId}>
+                  htmlFor={groupId}>
                   {isSwatch ? '' : item.displayValue}
                 </label>
               </div>

@@ -1,6 +1,6 @@
 import React from 'react';
-
-import s from './ProductGallery.module.css';
+import ImageList from './ImageList/ImageList';
+import CurrentImage from './CurrentImage/CurrentImage';
 
 class ProductGallery extends React.Component {
   state = {
@@ -11,32 +11,18 @@ class ProductGallery extends React.Component {
     this.setState({ current: this.props.images[0] });
   }
 
-  clickHandler = event => {
+  changeCurrentPhoto = event => {
     this.setState({ current: event.target.src });
   };
 
   render() {
     return (
       <>
-        <div className={s.images}>
-          {this.props.images.map((src, idx) => (
-            <div
-              key={idx}
-              role='button'
-              className={s.button}
-              onClick={this.clickHandler}>
-              <img className={s.image} src={src} alt={this.props.name} />
-            </div>
-          ))}
-        </div>
-
-        <div className={s.currentImageContainer}>
-          <img
-            className={s.image}
-            src={this.state.current}
-            alt={this.props.name}
-          />
-        </div>
+        <ImageList
+          images={this.props.images}
+          onClick={this.changeCurrentPhoto}
+        />
+        <CurrentImage src={this.state.current} name={this.props.name} />
       </>
     );
   }

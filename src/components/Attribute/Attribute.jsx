@@ -17,7 +17,7 @@ class Attribute extends Component {
       <div className={styleList.attributeChooser}>
         <p className={styleList.attributeName}>{name}:</p>
         <div className={originalStyles.container}>
-          {items.map((item, itemIdx) => {
+          {items.map(item => {
             //  i don't know what color value is used for a basket
             //  so i am providing that solution to basket store
             //  { ...rest, 'Color': notHEXcolor }
@@ -35,31 +35,32 @@ class Attribute extends Component {
               [originalStyles.swatch]: isSwatch,
             });
 
-            const groupId = `${name}${cartTag}${idx}${itemIdx}`;
+            const groupTag = `${name}${cartTag}${idx}`;
 
             return (
-              <div
+              <label
+                key={item.id}
                 className={classNames(originalStyles.group, {
                   [styleList.group]: !!styleList,
-                })}
-                key={item.id}>
+                })}>
                 <input
                   className={originalStyles.input}
                   type='radio'
-                  name={groupId}
-                  id={groupId}
+                  name={groupTag}
                   value={value}
                   onChange={() => changeHandler({ name, value })}
                   checked={isSelected}
                 />
 
-                <label
+                <span
+                  role='radio'
                   className={labelClassName}
-                  style={isSwatch ? { backgroundColor: item.value } : undefined}
-                  htmlFor={groupId}>
+                  style={
+                    isSwatch ? { backgroundColor: item.value } : undefined
+                  }>
                   {isSwatch ? '' : item.displayValue}
-                </label>
-              </div>
+                </span>
+              </label>
             );
           })}
         </div>

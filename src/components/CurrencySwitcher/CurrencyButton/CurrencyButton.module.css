@@ -8,7 +8,7 @@
 
   width: 60px;
 
-  font-family: 'Raleway';
+  font-family: var(--font-family);
   font-weight: 500;
   font-size: 18px;
   line-height: 26px;

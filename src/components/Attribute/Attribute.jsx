@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 
 import originalStyles from './Attribute.module.css';
 
-class Attribute extends Component {
+class Attribute extends React.Component {
   render() {
     const { styleList } = this.props;
     const { idx, fromCart } = this.props;
@@ -53,8 +53,9 @@ class Attribute extends Component {
                 />
 
                 <span
-                  role='radio'
                   className={labelClassName}
+                  role='radio'
+                  aria-checked={isSelected}
                   style={
                     isSwatch ? { backgroundColor: item.value } : undefined
                   }>

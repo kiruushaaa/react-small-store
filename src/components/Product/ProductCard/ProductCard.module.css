@@ -6,11 +6,13 @@
 }
 
 .card:hover {
-  box-shadow: 0px 4px 35px rgba(168, 172, 176, 0.19);
+  box-shadow: 0 4px 35px rgba(168, 172, 176, 0.19);
 }
 
 .stock {
+  z-index: 1;
   pointer-events: none;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -20,13 +22,16 @@
 
   text-transform: uppercase;
 
-  font-family: 'Raleway';
+  font-family: var(--font-family);
   font-weight: normal;
   font-size: 24px;
   line-height: 160%;
 
-  z-index: 1;
   color: #8d8f9a;
+}
+
+.outOfStock {
+  opacity: 0.5;
 }
 
 .productLink {
@@ -54,16 +59,12 @@
 .price {
   margin: 0;
 
-  font-family: 'Raleway';
+  font-family: var(--font-family);
   font-weight: 300;
   font-size: 18px;
   line-height: 160%;
 
   color: var(--c-black);
-}
-
-.title {
-  font-weight: 300;
 }
 
 .price {
@@ -99,10 +100,6 @@
 
 .card:hover .button {
   display: block;
-}
-
-.outOfStock {
-  opacity: 0.5;
 }
 
 .attributeName {

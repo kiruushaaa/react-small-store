@@ -1,15 +1,15 @@
-import React from 'react';
+import { PureComponent, createRef } from 'react';
 import classNames from 'classnames';
 
 import s from './ImageList.module.css';
 
-class ImageList extends React.PureComponent {
+class ImageList extends PureComponent {
   constructor(props) {
     super(props);
     this.state = { className: '' };
 
-    this.imageList = React.createRef();
-    this.image = React.createRef();
+    this.imageList = createRef();
+    this.image = createRef();
   }
 
   componentDidMount() {

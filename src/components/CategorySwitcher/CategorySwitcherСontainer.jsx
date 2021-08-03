@@ -1,9 +1,9 @@
-import React from 'react';
+import { Component } from 'react';
 import { graphql } from '@apollo/client/react/hoc';
 import { categoryAPI } from '../../apollo/queries';
 import CategorySwitcher from './CategorySwitcher';
 
-class CategorySwitcherСontainer extends React.Component {
+class CategorySwitcherContainer extends Component {
   render() {
     if (this.props.data.loading) return null;
 
@@ -15,5 +15,5 @@ class CategorySwitcherСontainer extends React.Component {
 }
 
 export default graphql(categoryAPI.getAllCategories())(
-  CategorySwitcherСontainer
+  CategorySwitcherContainer
 );

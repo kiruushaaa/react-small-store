@@ -1,8 +1,8 @@
-import React from 'react';
+import { Component } from 'react';
 import ImageList from './ImageList/ImageList';
 import CurrentImage from './CurrentImage/CurrentImage';
 
-class ProductGallery extends React.Component {
+class ProductGallery extends Component {
   state = {
     current: '',
   };

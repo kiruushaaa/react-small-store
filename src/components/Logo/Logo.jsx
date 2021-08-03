@@ -1,10 +1,10 @@
-import React from 'react';
+import { PureComponent } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
 
 import s from './Logo.module.css';
 
-class Logo extends React.PureComponent {
+class Logo extends PureComponent {
   render() {
     return (
       <NavLink to='/' className={s.link}>

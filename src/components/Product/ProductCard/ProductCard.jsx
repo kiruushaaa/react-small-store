@@ -1,4 +1,4 @@
-import React from 'react';
+import { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import { graphql } from '@apollo/client/react/hoc';
 import { productsAPI } from '../../../apollo/queries';
@@ -8,7 +8,7 @@ import AttributesListContainer from '../../Attribute/AttributesListContainer';
 
 import s from './ProductCard.module.css';
 
-class ProductCard extends React.Component {
+class ProductCard extends Component {
   state = {
     isOverlayOpened: false,
   };

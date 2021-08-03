@@ -1,11 +1,11 @@
-import React from 'react';
+import { Component } from 'react';
 import CurrencyButton from '../CurrencyButton/CurrencyButton';
 import { graphql } from '@apollo/client/react/hoc';
 import { currencyAPI } from '../../../apollo/queries';
 
 import s from './CurrencyList.module.css';
 
-class CurrencyList extends React.Component {
+class CurrencyList extends Component {
   render() {
     const {
       isOpened,

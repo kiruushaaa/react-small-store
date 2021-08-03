@@ -1,14 +1,14 @@
-import React from 'react';
+import { Component } from 'react';
 import { graphql } from '@apollo/client/react/hoc';
 import { productsAPI } from '../../../apollo/queries';
 import classNames from 'classnames';
 import Attribute from '../../Attribute/Attribute';
 import ProductPrice from '../../Product/ProductPrice/ProductPrice';
-import Gallery from './Gallery';
+import Gallery from '../Gallery/Gallery';
 
 import s from './CartItem.module.css';
 
-class CartItem extends React.Component {
+class CartItem extends Component {
   changeHandler = payload => {
     this.props.changeAttribute({
       id: this.props.cartItem.id,

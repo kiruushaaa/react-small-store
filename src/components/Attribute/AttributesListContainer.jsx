@@ -1,11 +1,11 @@
-import React from 'react';
+import { Component } from 'react';
 import { connect } from 'react-redux';
 import { addItem } from '../../redux/basketSlice';
 import { graphql } from '@apollo/client/react/hoc';
 import { productsAPI } from '../../apollo/queries';
 import AttributesList from './AttributesList';
 
-class AttributesListContainer extends React.Component {
+class AttributesListContainer extends Component {
   render() {
     const { loading } = this.props.data;
 

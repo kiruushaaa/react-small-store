@@ -1,9 +1,9 @@
-import React from 'react';
+import { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import s from './CategorySwitcher.module.css';
 
-class CategorySwitcher extends React.Component {
+class CategorySwitcher extends Component {
   render() {
     return (
       <ul className={s.list}>

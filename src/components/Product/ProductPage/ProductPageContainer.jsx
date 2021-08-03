@@ -1,10 +1,10 @@
-import React from 'react';
+import { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { graphql } from '@apollo/client/react/hoc';
 import { productsAPI } from '../../../apollo/queries';
 import ProductPage from './ProductPage';
 
-class ProductPageContainer extends React.Component {
+class ProductPageContainer extends Component {
   render() {
     const { loading } = this.props.data;
 

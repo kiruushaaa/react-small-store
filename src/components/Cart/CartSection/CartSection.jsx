@@ -1,4 +1,4 @@
-import React from 'react';
+import { Component } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { graphql } from '@apollo/client/react/hoc';
@@ -20,7 +20,7 @@ import {
 
 import s from './CartSection.module.css';
 
-class CartSection extends React.Component {
+class CartSection extends Component {
   render() {
     if (this.props.data.loading) return null;
 

@@ -1,11 +1,11 @@
-import React from 'react';
+import { PureComponent } from 'react';
 import Slider from 'react-slick';
 import classNames from 'classnames';
 
 import './slick-slider.css';
 import s from './Gallery.module.css';
 
-class Gallery extends React.PureComponent {
+class Gallery extends PureComponent {
   render() {
     const { images, name, fromCart } = this.props;
 

@@ -1,10 +1,10 @@
-import React from 'react';
+import { Component } from 'react';
 import classNames from 'classnames';
 import { getCurrencyIcon } from '../../../utils/utils';
 
 import s from './CurrencySwitcherButton.module.css';
 
-class CurrencySwitcherButton extends React.Component {
+class CurrencySwitcherButton extends Component {
   render() {
     const buttonClassName = classNames(s.button, {
       [s.buttonOpened]: this.props.isOpened,

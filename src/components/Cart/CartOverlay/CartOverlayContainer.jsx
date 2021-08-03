@@ -1,4 +1,4 @@
-import React from 'react';
+import { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import CartOverlay from './CartOverlay';
@@ -6,7 +6,7 @@ import CartSection from '../CartSection/CartSection';
 import { totalCountReducer } from '../../../utils/utils';
 import { appendMask, removeMask } from '../../../redux/appSlice';
 
-class CartOverlayContainer extends React.Component {
+class CartOverlayContainer extends Component {
   state = {
     isOpened: false,
   };

@@ -1,11 +1,11 @@
-import React from 'react';
+import { Component } from 'react';
 import { connect } from 'react-redux';
 import { changeCurrency } from '../../redux/appSlice';
 import CurrencySwitcher from './CurrencySwitcher';
 import CurrencyList from './CurrencyList/CurrencyList';
 import CurrencySwitcherButton from './CurrencySwitcherButton/CurrencySwitcherButton';
 
-class CurrencySwitcherContainer extends React.Component {
+class CurrencySwitcherContainer extends Component {
   state = {
     isOpened: false,
   };

@@ -1,15 +1,14 @@
-import React from 'react';
+import { Component } from 'react';
 import { withFormik } from 'formik';
-
 import Attribute from './Attribute';
 import { attributesReducer } from '../../utils/utils';
 
 import originalStyles from './AttributesList.module.css';
 
-class AttributesList extends React.Component {
+class AttributesList extends Component {
   componentDidMount() {
     if (this.props.attributes.length === 0 && this.props.fromProductCard) {
-      this.props.submitForm();
+      (async () => await this.props.submitForm())()
     }
   }
 

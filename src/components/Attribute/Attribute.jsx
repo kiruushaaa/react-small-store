@@ -1,9 +1,9 @@
-import React from 'react';
+import { Component } from 'react';
 import classNames from 'classnames';
 
 import originalStyles from './Attribute.module.css';
 
-class Attribute extends React.Component {
+class Attribute extends Component {
   render() {
     const { styleList } = this.props;
     const { idx, fromCart } = this.props;

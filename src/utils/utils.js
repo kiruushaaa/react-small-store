@@ -32,11 +32,8 @@ export const attributesReducer = (object, curr) => {
 };
 
 export const itemsComparator = (item, givenItem) =>
-  item.id === givenItem.id
-    ? JSON.stringify(item.attributes) === JSON.stringify(givenItem.attributes)
-      ? true
-      : false
-    : false;
+  item.id === givenItem.id &&
+  JSON.stringify(item.attributes) === JSON.stringify(givenItem.attributes);
 
 export const getQuantity = counter =>
   `${counter} item${counter !== 1 ? 's' : ''}`;

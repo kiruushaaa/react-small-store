@@ -1,8 +1,8 @@
-import React from 'react';
+import { PureComponent } from 'react';
 
 import s from './CurrentImage.module.css';
 
-class CurrentImage extends React.PureComponent {
+class CurrentImage extends PureComponent {
   render() {
     return (
       <div className={s.container}>

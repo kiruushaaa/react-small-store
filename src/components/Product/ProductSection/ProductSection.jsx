@@ -1,9 +1,9 @@
-import React from 'react';
+import { Component } from 'react';
 import ProductList from '../ProductList/ProductList';
 
 import s from './ProductSection.module.css';
 
-class ProductSection extends React.Component {
+class ProductSection extends Component {
   render() {
     return (
       <>

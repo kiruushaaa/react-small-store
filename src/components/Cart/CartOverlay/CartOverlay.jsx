@@ -1,10 +1,10 @@
-import React from 'react';
+import { Component } from 'react';
 import onClickOutside from 'react-onclickoutside';
 
 import cart from '../../../assets/images/cart.svg';
 import s from './CartOverlay.module.css';
 
-class CartOverlay extends React.Component {
+class CartOverlay extends Component {
   handleClickOutside = () => {
     this.props.onLeaveFromClick();
   };

@@ -5,8 +5,7 @@ const basketSlice = createSlice({
   name: 'basket',
   initialState: [],
   reducers: {
-    hydrate: (_, { payload }) => payload,
-
+    hydrate: (state, { payload }) => payload,
     addItem: (state, { payload }) => {
       const item = state.find(item => itemsComparator(item, payload));
 

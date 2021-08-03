@@ -1,4 +1,4 @@
-import React from 'react';
+import { Component } from 'react';
 import CategorySwitcherContainer from '../CategorySwitcher/CategorySwitcherСontainer';
 import Logo from '../Logo/Logo';
 import CurrencySwitcherContainer from '../CurrencySwitcher/CurrencySwitcherContainer';
@@ -6,7 +6,7 @@ import CartOverlayContainer from '../Cart/CartOverlay/CartOverlayContainer';
 
 import s from './Header.module.css';
 
-class Header extends React.Component {
+class Header extends Component {
   render() {
     return (
       <header>

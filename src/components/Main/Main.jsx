@@ -1,4 +1,4 @@
-import React from 'react';
+import { Component } from 'react';
 import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import ProductSection from '../Product/ProductSection/ProductSection';
 import ProductPageContainer from '../Product/ProductPage/ProductPageContainer';
@@ -7,7 +7,7 @@ import Mask from '../misc/Mask/Mask';
 
 import s from './Main.module.css';
 
-class Main extends React.Component {
+class Main extends Component {
   render() {
     const categoryName = this.props.location.pathname.split('/')[1];
 

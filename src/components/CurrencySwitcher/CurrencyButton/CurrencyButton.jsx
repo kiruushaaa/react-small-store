@@ -1,11 +1,11 @@
-import React from 'react';
+import { Component } from 'react';
 import { connect } from 'react-redux';
 import { changeCurrency } from '../../../redux/appSlice';
 import { getCurrencyIcon } from '../../../utils/utils';
 
 import s from './CurrencyButton.module.css';
 
-class CurrencyButton extends React.Component {
+class CurrencyButton extends Component {
   clickHandler = () => {
     this.props.changeCurrency(this.props.currency);
   };

@@ -1,11 +1,11 @@
-import React from 'react';
+import { Component } from 'react';
 import { graphql } from '@apollo/client/react/hoc';
 import { productsAPI } from '../../../apollo/queries';
 import ProductCard from '../ProductCard/ProductCard';
 
 import s from './ProductList.module.css';
 
-class ProductList extends React.Component {
+class ProductList extends Component {
   render() {
     const { loading, category } = this.props.data;
 

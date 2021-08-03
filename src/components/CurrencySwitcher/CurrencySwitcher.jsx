@@ -1,9 +1,9 @@
-import React from 'react';
+import { Component } from 'react';
 import onClickOutside from 'react-onclickoutside';
 
 import s from './CurrencySwitcher.module.css';
 
-class CurrencySwitcher extends React.Component {
+class CurrencySwitcher extends Component {
   handleClickOutside = () => {
     this.props.onClickOutside();
   };
